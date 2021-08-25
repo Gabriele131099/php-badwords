@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,11 +10,13 @@
 <body>
     <main>
 
-        <?php
+        <h1><?php
             $testo = 'Ciao sono Lucia, sono una sirena. Può sembrare strano ma è una storia vera';
+            $censura = $_GET['name'];
+            $censurata = str_ireplace( $censura, "***", $testo);
+            echo $censurata . ' ,La lunghezza '.strlen($testo);
 
-            echo {$testo};
-        ?>
+        ?></h1>
     <!--Creare una variabile con un paragrafo di testo a vostra scelta.
     Stampare a schermo il paragrafo e la sua lunghezza.
     Una parola da censurare viene passata dall’utente tramite parametro GET.
